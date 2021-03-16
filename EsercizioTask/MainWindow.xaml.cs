@@ -36,7 +36,6 @@ namespace EsercizioTask
             }
             return n_multipli;
         }
-
     
         private void btnEsegui_Click(object sender, RoutedEventArgs e)
         {
