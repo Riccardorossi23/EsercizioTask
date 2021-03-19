@@ -19,7 +19,7 @@
                 </Grid.ColumnDefinitions>
                 <Label Content="Numero A:" Grid.Row="0" Grid.Column="0"  Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"  />
                 <TextBox x:Name="txtNumero" Grid.Row="0" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="100" Height="40"/>
-                <ProgressBar x:Name="Progress" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Maximum="2000000000" Height="10"  Width="150"/>
+                <ProgressBar x:Name="Progress" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="10"  Width="150"/>
                 <Label Content="Multipli di A:" Grid.Row="0" Grid.Column="3"  VerticalContentAlignment="Center" Height="40" HorizontalContentAlignment="Center" />
                 <Label x:Name="lblMultpli" Grid.Row="0" Grid.Column="4"  Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
                 <Button x:Name="btnEsegui" Content="Esegui" Grid.Column="5"  Width="60" Height="60" Click="btnEsegui_Click"  />

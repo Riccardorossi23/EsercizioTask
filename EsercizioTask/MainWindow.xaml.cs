@@ -24,24 +24,32 @@ namespace EsercizioTask
         {
             InitializeComponent();
         }
-        public static int Multipli(int n)
+        public int Multipli(int n)
         {
             int n_multipli = 0;
             for (int i = 0; i < 200000000; i++)
             {
-                if ((i / n) % 2 == 0)
+                if (i % n == 0)
                 {
                     n_multipli++;
                 }
+                    if (i % 2000000 == 0)
+                    {
+                        Progress.Dispatcher.Invoke(() =>  { Progress.Value++;});
+                    }
             }
+           lblMultpli.Dispatcher.Invoke(() => {lblMultpli.Content = n_multipli;});
             return n_multipli;
         }
     
         private void btnEsegui_Click(object sender, RoutedEventArgs e)
         {
         int n = int.Parse(txtNumero.Text);
-        Task<int> risultato = Task.Factory.StartNew(() => Multipli(n));
-            lblMultpli.Content = $"{risultato.Result}";
+            Progress.Minimum = 0;
+            Progress.Maximum = 100;
+            Progress.Value = 0;
+            Task<int> risultato = Task.Factory.StartNew(() => Multipli(n));
+            
 
         }
     }
